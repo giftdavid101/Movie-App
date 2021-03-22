@@ -3,10 +3,17 @@
   height: 100px;
   background: black;
 }
-.navbar_nb_nav-lnks {
+.navbar_nb {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.navbar_nb_nav-lnks {
+  display: flex;
+  align-items: center;
+}
+.navbar_nb_nav-lnks .n-l {
+  margin: 5px;
 }
 
 /*# sourceMappingURL=navbar.style.css.map */

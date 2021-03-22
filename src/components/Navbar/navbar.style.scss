@@ -3,10 +3,16 @@
   height: 100px;
   background: black;
   &_nb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     &_nav-lnks{
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      .n-l{
+        margin:5px;
+      }
     }
   }
+
 }
