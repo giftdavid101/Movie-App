@@ -1,0 +1,12 @@
+.navbar {
+  width: 100%;
+  height: 100px;
+  background: black;
+}
+.navbar_nb_nav-lnks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*# sourceMappingURL=navbar.style.css.map */
