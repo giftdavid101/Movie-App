@@ -1,0 +1,11 @@
+.search-bar {
+  width: 400px;
+}
+.search-bar .inp {
+  width: 100%;
+  outline: none;
+  padding: 15px 0;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=searchbar.style.css.map */

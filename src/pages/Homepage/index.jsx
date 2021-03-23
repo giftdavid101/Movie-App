@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import './homepage.style.css';
 import Axios from 'axios';
-import Card from "../../elements/Card";
+import Card from "../../components/elements/Card";
 
 const HomePage = () => {
     const [movies,setMovies] = useState({})
