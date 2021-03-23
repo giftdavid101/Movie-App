@@ -4,6 +4,7 @@
 .homepage_hp-c {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 50px;
 }
 
 /*# sourceMappingURL=homepage.style.css.map */

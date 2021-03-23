@@ -5,7 +5,7 @@ const Card = ({movies}) => {
     return (
         <div className={'card'}>
             <div className={'card_emage-div'}>
-                <img src={`https://image.tmdb.org/t/p/w200/${ movies && movies.poster_path}`} alt={`${movies && movies.title} Poster`}/>
+                <img className={'emage'} src={`https://image.tmdb.org/t/p/w200/${ movies && movies.poster_path}`} alt={`${movies && movies.title} Poster`}/>
             </div>
         </div>
     );
