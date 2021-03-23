@@ -32,10 +32,15 @@ const HomePage = () => {
             <div className={'homepage_hp-c container'}>
                 {
                     movies.map((el) => (
-                        <Card movies={el}/>
+                        <Card movies={el}>
+                            <div className={'card_emage-div'}>
+                                <img className={'emage'} src={`https://image.tmdb.org/t/p/w200/${el.poster_path}`} alt={el.title}/>
+                            </div>
+                            <h5>{el.title}</h5>
+                            <div>{el.vote_average}</div>
+                        </Card>
                     ))
                 }
-
             </div>
 
         </div>
