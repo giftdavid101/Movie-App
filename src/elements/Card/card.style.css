@@ -1,0 +1,13 @@
+.card {
+  width: 300px;
+  height: 300px;
+  grid-gap: 20px;
+}
+.card_emage-div {
+  width: 100%;
+}
+.card_emage-div img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=card.style.css.map */
