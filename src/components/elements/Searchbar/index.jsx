@@ -1,10 +1,14 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './searchbar.style.css';
+import Axios from 'axios';
 
-const SearchBar = () => {
+const SearchBar = ({query}) => {
+    const onChange = e => {
+        e.preventDefault();
+    }
     return (
         <div className={'search-bar'}>
-            <input placeholder={'Search for movies'} className={'inp'}/>
+            <input value={query} onChange={onChange} type={'text'} placeholder={'Search for movies'} className={'inp'}/>
         </div>
     );
 };
