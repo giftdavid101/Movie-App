@@ -11,7 +11,7 @@ const TopRated = () => {
      */
 
 
-    const requestMovies =(link = `https://api.themoviedb.org/3/movie/top_rated?api_key=${mainUrl}&language=en-US&page=${pagination}`)=> {
+    const topRatedMovies =(link = `https://api.themoviedb.org/3/movie/top_rated?api_key=${mainUrl}&language=en-US&page=${pagination}`)=> {
         console.log(link)
         Axios.get(link).then((response) =>{
             const {data,status} = response
@@ -24,13 +24,13 @@ const TopRated = () => {
         });
     }
     useEffect(() =>{
-        requestMovies()
+        topRatedMovies()
     },[])
 
     return (
         <div className={'top-rated'}>
            <h2>Top Rated</h2>
-            <div className={''}>
+            <div className={'top-rated_tp-con grid-style'}>
                 {
                     topRated.map((el) => (
                         <Card key={el.id}>
@@ -40,7 +40,7 @@ const TopRated = () => {
                             <h5>{el.title}</h5>
                             <div>{el.vote_average}</div>
                         </Card>
-                    ))
+                    )).slice(-5)
                 }
             </div>
         </div>
