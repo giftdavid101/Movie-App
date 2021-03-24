@@ -3,6 +3,7 @@ import './homepage.style.css';
 import TopRated from "../../components/compounds/Toprated";
 import NowPlaying from "../../components/compounds/Nowplaying";
 import Popular from "../../components/compounds/Popular";
+import UpcomingMovies from "../../components/compounds/Upcomingmovies";
 
 
 
@@ -15,6 +16,7 @@ const HomePage = () => {
                 <NowPlaying/>
                 <TopRated/>
                 <Popular/>
+                <UpcomingMovies/>
             </div>
 
 
