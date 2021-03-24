@@ -15,3 +15,8 @@
     margin: auto;
     padding: 5px;
 }
+.grid-style{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
