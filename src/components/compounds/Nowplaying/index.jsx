@@ -1,10 +1,16 @@
-import React,{useState,useEffect} from 'react';
+import React,{useContext,useState,useEffect} from 'react';
+import {GlobalContext} from "../../../context/globalstate";
+import {Route} from 'react-router-dom';
 import Axios from 'axios';
 import './nowplaying.style.css';
-import Card from "../../elements/Card";
+// import NowPlayingCard from "../../elements/Card";
+import TopRatedSingle from "../TopRatedSingleDetail";
+import NowPlayingCard from "../../elements/Nowplayingcard";
 
-const NowPlaying = () => {
+
+const NowPlaying = ({match}) => {
     const [nowPlaying, setNowPlaying] = useState([])
+  // const {nowPlaying} = useContext(GlobalContext)
     const mainUrl = process.env.REACT_APP_API_BASE_LINK
 
     /**
@@ -25,22 +31,18 @@ const NowPlaying = () => {
     }
     useEffect(() =>{
         requestLatestMovie()
+        // eslint-disable-next-line
     },[])
 
 
-
+    console.log(match)
     return (
         <div className={'now-playing'}>
-            <h2>Now Playing</h2>
+            <h2 className={'tiny-elements-padding'}>Now Playing</h2>
              <div className={'now-playing_np-con grid-style'}>
                  {
                      nowPlaying.map((el) => (
-                         <Card key={el.id}>
-                             <div className={'card_emage-div'}>
-                                 <img className={'emage'} src={`https://image.tmdb.org/t/p/w200/${el.backdrop_path}`} alt={el.title}/>
-                             </div>
-                             <h5>{el.title}</h5>
-                         </Card>
+                         <NowPlayingCard movie={el} key={el.id}/>
                      )).slice(15)
                  }
              </div>

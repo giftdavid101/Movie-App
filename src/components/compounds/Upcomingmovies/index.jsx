@@ -23,10 +23,12 @@ const UpcomingMovies = () => {
     }
     useEffect(() => {
         requestUpcomingMovies()
+        // eslint-disable-next-line
     },[])
 
     return (
         <div className={'upcoming-movies'}>
+            <h2 className={'tiny-elements-padding'}>Upcoming Movies</h2>
             <div className={'grid-style'}>
                 {
                     upcoming.map((el) => (

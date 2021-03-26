@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React from 'react';
 import './homepage.style.css';
 import TopRated from "../../components/compounds/Toprated";
 import NowPlaying from "../../components/compounds/Nowplaying";
@@ -18,8 +18,6 @@ const HomePage = () => {
                 <Popular/>
                 <UpcomingMovies/>
             </div>
-
-
         </div>
     );
 };

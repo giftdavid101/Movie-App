@@ -1,0 +1,12 @@
+.np-card {
+  position: relative;
+}
+.np-card_play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+}
+
+/*# sourceMappingURL=nowplaying.style.css.map */

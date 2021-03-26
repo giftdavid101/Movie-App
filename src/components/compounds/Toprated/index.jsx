@@ -1,19 +1,30 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useContext, useState} from 'react';
+import {GlobalContext} from "../../../context/globalstate";
 import Axios from "axios";
-import Card from "../../elements/Card";
+// import Card from "../../elements/Card";
+// import {useHistory} from 'react-router-dom'
+import TopRatedCard from "../../elements/TopratedCard";
+import mvRequest from "../../../utils/mvRequest";
+
 
 const TopRated = () => {
+
+    // const [showInfo, setShowInfo] = useState(false)
     const [topRated,setTopRated] = useState([])
     const [pagination, setPagination] = useState(1)
+    // const {topRated} = useContext(GlobalContext)
+    // const history = useHistory()
+
     const mainUrl = process.env.REACT_APP_API_BASE_LINK
+
+
+
     /**
      * @param {string} link -takes the page link
      */
+    const topRatedMovies =(link = `/movie/top_rated?page=${pagination}`)=> {
 
-
-    const topRatedMovies =(link = `https://api.themoviedb.org/3/movie/top_rated?api_key=${mainUrl}&language=en-US&page=${pagination}`)=> {
-        console.log(link)
-        Axios.get(link).then((response) =>{
+        mvRequest.get(link).then((response) =>{
             const {data,status} = response
             console.log(response)
             if(status === 200){
@@ -25,21 +36,20 @@ const TopRated = () => {
     }
     useEffect(() =>{
         topRatedMovies()
+        // eslint-disable-next-line
     },[])
 
     return (
         <div className={'top-rated'}>
-           <h2>Top Rated</h2>
+           <h2 className={'tiny-elements-padding'}>Top Rated</h2>
             <div className={'top-rated_tp-con grid-style'}>
                 {
                     topRated.map((el) => (
-                        <Card key={el.id}>
-                            <div className={'card_emage-div'}>
-                                <img className={'emage'} src={`https://image.tmdb.org/t/p/w200/${el.poster_path}`} alt={el.title}/>
-                            </div>
-                            <h5>{el.title}</h5>
-                            <div>{el.vote_average}</div>
-                        </Card>
+                        <TopRatedCard
+                            movie={el}
+                            key={el.id}
+                            emage={el.poster_path}
+                        />
                     )).slice(-5)
                 }
             </div>

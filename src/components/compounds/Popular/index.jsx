@@ -1,7 +1,8 @@
 import React, {useState,useEffect} from 'react';
 import  Axios from 'axios'
-import Card from "../../elements/Card";
+// import Card from "../../elements/Card";
 import './popular.style.css'
+import PopularCard from "../../elements/Popularcard";
 
 const Popular = () => {
     const [popularMovies, setPopularMovies] = useState([]);
@@ -23,21 +24,21 @@ const Popular = () => {
     }
     useEffect(() =>{
         requestPopularMovies()
+        // eslint-disable-next-line
     },[])
 
 
     return (
         <div className={'popular'}>
-          <h2> Popular Movies</h2>
+          <h2 className={'tiny-elements-padding'}> Popular Movies</h2>
             <div className={'popular_p-con grid-style'}>
                 {
                     popularMovies.map((el) => (
-                        <Card key={el.id}>
-                                <div className={'card_emage-div'}>
-                                    <img className={'emage'} src={`https://image.tmdb.org/t/p/w200/${el.poster_path}`} alt={el.title}/>
-                                </div>
-                                <h5>{el.title}</h5>
-                        </Card>
+                        <PopularCard
+                            key={el.id}
+                            movie={el}
+                            emage={el.backdrop_path}
+                        />
                     )).slice(15)
                 }
             </div>
