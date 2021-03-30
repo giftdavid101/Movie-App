@@ -1,14 +1,11 @@
-import React,{useContext,useState,useEffect} from 'react';
-import {GlobalContext} from "../../../context/globalstate";
-import {Route} from 'react-router-dom';
+import React,{useState,useEffect} from 'react';
 import Axios from 'axios';
 import './nowplaying.style.css';
-// import NowPlayingCard from "../../elements/Card";
-import TopRatedSingle from "../TopRatedSingleDetail";
 import NowPlayingCard from "../../elements/Nowplayingcard";
 
 
 const NowPlaying = ({match}) => {
+
     const [nowPlaying, setNowPlaying] = useState([])
   // const {nowPlaying} = useContext(GlobalContext)
     const mainUrl = process.env.REACT_APP_API_BASE_LINK
@@ -37,8 +34,9 @@ const NowPlaying = ({match}) => {
 
     console.log(match)
     return (
+
         <div className={'now-playing'}>
-            <h2 className={'tiny-elements-padding'}>Now Playing</h2>
+            <h2 className={'tiny-elements-padding'}>Watching now</h2>
              <div className={'now-playing_np-con grid-style'}>
                  {
                      nowPlaying.map((el) => (
@@ -47,6 +45,7 @@ const NowPlaying = ({match}) => {
                  }
              </div>
         </div>
+
     );
 };
 

@@ -1,28 +1,19 @@
-import React, {useEffect, useContext, useState} from 'react';
-import {GlobalContext} from "../../../context/globalstate";
-import Axios from "axios";
-// import Card from "../../elements/Card";
-// import {useHistory} from 'react-router-dom'
+import React, {useEffect, useState} from 'react';
 import TopRatedCard from "../../elements/TopratedCard";
 import mvRequest from "../../../utils/mvRequest";
 
 
 const TopRated = () => {
-
-    // const [showInfo, setShowInfo] = useState(false)
     const [topRated,setTopRated] = useState([])
-    const [pagination, setPagination] = useState(1)
-    // const {topRated} = useContext(GlobalContext)
-    // const history = useHistory()
 
-    const mainUrl = process.env.REACT_APP_API_BASE_LINK
+    // const mainUrl = process.env.REACT_APP_API_BASE_LINK
 
 
 
     /**
      * @param {string} link -takes the page link
      */
-    const topRatedMovies =(link = `/movie/top_rated?page=${pagination}`)=> {
+    const topRatedMovies =(link = `/movie/top_rated`)=> {
 
         mvRequest.get(link).then((response) =>{
             const {data,status} = response
@@ -41,7 +32,7 @@ const TopRated = () => {
 
     return (
         <div className={'top-rated'}>
-           <h2 className={'tiny-elements-padding'}>Top Rated</h2>
+           <h2 className={'tiny-elements-padding'}>Top Rated Movies</h2>
             <div className={'top-rated_tp-con grid-style'}>
                 {
                     topRated.map((el) => (

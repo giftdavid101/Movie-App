@@ -1,11 +1,19 @@
-export default  (state,action) => {
-    switch(action.type){
-        case "ADD_TO_WATCHLIST":
+export const  AppReducer = (state, action) => {
+    switch (action.type) {
+            case "ADD_MOVIE_T0_WATCHLIST":
             return {
                 ...state,
-                watchlist:[action.payload, ...state.watchlist]
+                watchList: [action.payload, ...state.watchList]
+            };
+            case "REMOVE_MOVIE_FROM_WATCHLIST":
+            return {
+                ...state,
+                watchList: state.watchList.filter((el) => el.id !== action.payload),
+
             }
-        default:
+
+
+          default:
             return state;
     }
 }

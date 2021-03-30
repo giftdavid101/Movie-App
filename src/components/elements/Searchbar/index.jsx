@@ -1,6 +1,6 @@
-import React,{useState} from 'react';
+import React from 'react';
 import './searchbar.style.css';
-import Axios from 'axios';
+
 
 const SearchBar = ({query}) => {
     const onChange = e => {
