@@ -1,6 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import TopRatedCard from "../../elements/TopratedCard";
 import mvRequest from "../../../utils/mvRequest";
+import {GlobalContext} from "../../../context/globalstate";
 
 
 const TopRated = () => {
@@ -25,7 +26,9 @@ const TopRated = () => {
             console.log(err)
         });
     }
+
     useEffect(() =>{
+
         topRatedMovies()
         // eslint-disable-next-line
     },[])

@@ -10,7 +10,11 @@ const Button = ({children, props, movie}) => {
         <div className={'btn'}>
             {props}
             {children}
-            <button onClick={() => addMovieToWatchlist(movie)}  style={{width:'300px', border:'20px', padding:'20px', background:'gold', fontSize:'25px'}} className={'btn_btn-tag'}> Add to Watchlist <RiHeartAddFill/></button>
+            <button
+                onClick={() => addMovieToWatchlist(movie)}
+                style={{width:'300px', border:'20px', padding:'20px', background:'gold', fontSize:'25px'}}
+                className={'btn_btn-tag'}
+            > Add to Watchlist <RiHeartAddFill/></button>
         </div>
     );
 };

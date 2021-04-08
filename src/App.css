@@ -61,3 +61,28 @@
     border: none;
 
 }
+.heart{
+    /*background-color: white;*/
+    /*border: 1px solid green;*/
+    font-size: 30px;
+
+
+    /*color:white;*/
+    /*border: 1px solid black;*/
+    /*color: black;*/
+    /*font-size: 20px;*/
+    /*border: none;*/
+
+    /*background:none ;*/
+}
+.heart--active{
+    color:red;
+}
+.heart-btn{
+    padding: 0 30px;
+}
+.dtails{
+
+    display: flex;
+    justify-content: space-between;
+}
