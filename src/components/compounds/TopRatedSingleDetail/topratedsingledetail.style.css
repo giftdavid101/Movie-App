@@ -1,0 +1,14 @@
+.top-rated-single-detail {
+  width: 100%;
+  height: 100vh;
+}
+.top-rated-single-detail_trs-d-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-rated-single-detail_trs-d-content_details {
+  text-align: justify;
+}
+
+/*# sourceMappingURL=topratedsingledetail.style.css.map */

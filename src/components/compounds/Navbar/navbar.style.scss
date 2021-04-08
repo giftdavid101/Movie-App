@@ -1,0 +1,21 @@
+.navbar{
+  width: 100%;
+  height: 80px;
+  background: black;
+  color: whitesmoke;
+  &_nb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_nav-lnks{
+      display: flex;
+      align-items: center;
+      .n-l{
+        margin: 0 15px ;
+        color: whitesmoke;
+        text-decoration: none;
+      }
+    }
+  }
+
+}

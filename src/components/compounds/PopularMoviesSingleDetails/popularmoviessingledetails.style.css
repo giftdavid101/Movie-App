@@ -1,0 +1,13 @@
+.popular-movies {
+  width: 100%;
+}
+.popular-movies_popular-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popular-movies_popular-content_details {
+  text-align: justify;
+}
+
+/*# sourceMappingURL=popularmoviessingledetails.style.css.map */

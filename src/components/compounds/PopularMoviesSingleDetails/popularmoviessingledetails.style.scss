@@ -1,0 +1,11 @@
+.popular-movies{
+  width:100%;
+  &_popular-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_details{
+      text-align: justify;
+    }
+  }
+}

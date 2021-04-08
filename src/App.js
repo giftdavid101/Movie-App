@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import {Route,Switch} from 'react-router-dom';
+import NavBar from "./components/compounds/Navbar";
+import HomePage from "./pages/Homepage";
+import TopRatedSingle from "./components/compounds/TopRatedSingleDetail";
+import {GlobalProvider} from "./context/globalstate";
+import PopularSingle from "./components/compounds/PopularMoviesSingleDetails";
+import Watchlist from "./pages/Watchlist";
+import Favorites from "./pages/Favorites";
 
 function App() {
   return (
+    <GlobalProvider>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <NavBar/>
+     <Switch>
+        <Route exact path={'/'} component={HomePage}/>
+        <Route exact path={'/top-rated-single-detail'} component={TopRatedSingle}/>
+        <Route exact path={'/popular-movies'} component={PopularSingle}/>
+        <Route exact path={'/watchlist'} component={Watchlist}/>
+        <Route exact path={'/favorites'}  component={Favorites} />
+
+     </Switch>
     </div>
+    </GlobalProvider>
   );
 }
 
