@@ -1,20 +1,20 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 import "./topratedcard.style.css";
 import Ratings from "../Ratings";
 import { AiFillHeart } from "react-icons/all";
-import { GlobalContext } from "../../../context/globalstate";
+// import { GlobalContext } from "../../../context/globalstate";
 
 const TopRatedCard = ({ movie, emage,handleAddFavourites}) => {
-  const { addMovieToFavorites } = useContext(GlobalContext);
-  const { favoriteColor } = useContext(GlobalContext);
-  const { favorites } = useContext(GlobalContext);
-  let storedMovie = favorites.find((el) => el.id === movie.id);
-  const favoritesDisabled = !!storedMovie;
-  const [color, setColor] = useState("");
-  const handleColor = () => {
-    setColor("red");
-  };
+  // const { addMovieToFavorites } = useContext(GlobalContext);
+  // const { favoriteColor } = useContext(GlobalContext);
+  // const { favorites } = useContext(GlobalContext);
+  // let storedMovie = favorites.find((el) => el.id === movie.id);
+  // const favoritesDisabled = !!storedMovie;
+  // const [color, setColor] = useState("");
+  // const handleColor = () => {
+  //   setColor("red");
+  // };
 
   const history = useHistory();
   const handleClick = () => {
