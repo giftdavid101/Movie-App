@@ -20,7 +20,6 @@ function App() {
         <Route exact path={'/popular-movies'} component={PopularSingle}/>
         <Route exact path={'/watchlist'} component={Watchlist}/>
         <Route exact path={'/favorites'}  component={Favorites} />
-
      </Switch>
     </div>
     </GlobalProvider>
